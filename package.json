@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fortaine/fetch-event-source": "^3.0.6",
-    "@hello-pangea/dnd": "^16.5.0",
+    "@hello-pangea/dnd": "^16.6.0",
     "@svgr/webpack": "^6.5.1",
     "@vercel/analytics": "^1.2.1",
     "emoji-picker-react": "^4.9.2",
