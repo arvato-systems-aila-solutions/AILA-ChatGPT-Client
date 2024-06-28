@@ -123,8 +123,8 @@ docker run -d -p 80:3000 \
    -e OPENAI_API_KEY="your Avvia Intelligence API Key" \
    -e BASE_URL="url of Avvia Intelligence OpenAI endpoint, e.g. https://server/openai" \
    -e NEXTAUTH_URL="url where the app is hosted, e.g. https://example:3000" \
-   -e OKTA_OAUTH2_CLIENT_ID "okta client id" \
-   -e OKTA_OAUTH2_CLIENT_SECRET "okta secret" \
+   -e AUTH_OKTA_ID "okta client id" \
+   -e AUTH_OKTA_SECRET "okta secret" \
    avviaintelligence/knowledgeai-chat
 ```
 
