@@ -1,13 +1,13 @@
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { Home } from "../app/components/home";
 import Locale from "../app/locales";
 
-import "../app/styles/globals.scss";
-import "../app/styles/markdown.scss";
-import "../app/styles/highlight.scss";
-import styles from "../app/components/auth.module.scss";
-import Image from "next/image";
 import Head from "next/head";
+import Image from "next/image";
+import styles from "../app/components/auth.module.scss";
+import "../app/styles/globals.scss";
+import "../app/styles/highlight.scss";
+import "../app/styles/markdown.scss";
 
 export default function Chat() {
   const { data: session, status } = useSession();
@@ -26,6 +26,8 @@ export default function Chat() {
       </>
     );
   }
+
+  const authProvider = process.env.NEXT_PUBLIC_AUTH_PROVIDER ? process.env.NEXT_PUBLIC_AUTH_PROVIDER : "okta";
   return (
     <>
       <Head>
@@ -57,7 +59,7 @@ export default function Chat() {
         <div className={styles["auth-title"]}>{Locale.Home.LoginMessage}</div>
         <div className={styles["auth-actions"]}>
           <p>&nbsp;</p>
-          <button onClick={() => signIn("okta")}>{Locale.Home.Login}</button>
+          <button onClick={() => signIn(authProvider)}>{Locale.Home.Login} - {authProvider}</button>
         </div>
       </div>
     </>
