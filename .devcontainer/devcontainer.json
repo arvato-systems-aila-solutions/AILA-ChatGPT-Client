@@ -26,7 +26,8 @@
             "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
             "username": "vscode"
         },
-        "ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {}
+        "ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	},
 	"postCreateCommand": "bash ./.devcontainer/postcreate.sh",
     "postStartCommand": "yarn install",
