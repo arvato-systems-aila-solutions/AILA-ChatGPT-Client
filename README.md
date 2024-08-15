@@ -98,6 +98,8 @@ yarn dev
 
 Docker credentials can be found in the keypass file.
 
+#### Buildx (Avvia Intelligence)
+
 ```shell
 # enable multi plattform build
 docker buildx create --use
@@ -111,6 +113,13 @@ docker buildx build --platform linux/amd64,linux/arm64 -t avviaintelligence/know
 docker push avviaintelligence/knowledgeai-chat:<version>
 ```
 
+#### Build (Bertelsmann CC)
+
+```shell
+# build and push image
+docker build -t bergaiprodacrmain.azurecr.io/app/avvia-chatclient:<version> .
+docker push ergaiprodacrmain.azurecr.io/app/avvia-chatclient:<version>
+```
 
 ## Deployment
 
